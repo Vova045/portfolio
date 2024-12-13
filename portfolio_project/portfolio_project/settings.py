@@ -37,8 +37,7 @@ if DEBUG:
     ]
 else:
     # В продакшене: собранная статика в папке 'staticfiles'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    print(STATIC_ROOT)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 BASE_URL="http://127.0.0.1:8000"
