@@ -136,9 +136,12 @@ DATETIME_FORMAT="H:i:s d.m.y"
 # else:
 #     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+if DEBUG:
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 # print(STATICFILES_DIRS)
 BASE_URL="http://127.0.0.1:8000"
 
