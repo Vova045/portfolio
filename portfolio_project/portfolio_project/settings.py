@@ -134,7 +134,7 @@ if DEBUG:
         os.path.join(base_static, 'static')
     ]
 else:
-    STATIC_ROOT = os.path.join(base_static, 'staticfiles')
+    STATIC_ROOT = 'static/'
 # print(STATICFILES_DIRS)
 BASE_URL="http://127.0.0.1:8000"
 
