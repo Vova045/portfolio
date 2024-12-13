@@ -1,109 +1,68 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #212228;
-            color: #ffffff;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #2A2F30;
-        }
-        header a {
-            text-decoration: none;
-            color: #ffffff;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #FF5722;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background-color: #212228;
-        }
-        .hero h1 {
-            font-size: 48px;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #AAAAAA;
-        }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 50px 20px;
-        }
-        .project {
-            background-color: #2A2F30;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .project:hover {
-            transform: scale(1.05);
-        }
-        .project img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .project h3 {
-            margin: 15px 0;
-            color: #FF5722;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #2A2F30;
-            color: #AAAAAA;
-        }
-    </style>
+    <title>Владимир Цар</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'home/home.css' %}">
 </head>
 <body>
     <header>
-        <div>My Portfolio</div>
-        <nav>
-            <a href="#esenia">Esenia</a>
-            <a href="#swag">SWAG</a>
-            <a href="#drydry">DRYDRY</a>
-        </nav>
+        <div class="logo">
+            <img src="{% static 'home/photo.jpg' %}" alt="Logo">
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#about">Обо мне</a>
+                <a href="#home" class="active">Домой</a>
+                <a href="#contact">Связь</a>
+            </div>
+            <div class="language-toggle" onclick="toggleLanguage()">
+                <span>EN</span>
+            </div>
+        </div>
     </header>
-    <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Showcasing creative solutions for modern businesses.</p>
+    <section class="hero" data-lang="ru">
+        <p>Привет, я Владимир 😊<br> Программист из России, увлеченный решением задач и созданием продуктов для B2B и B2C. Я full-stack разработчик, способный работать с любой стадии проекта до завершения.
+            Среди моих проектов, работа с такими брендами как <a>Esenia</a>, <a>SWAG</a> и <a>DryDry</a>.
+            Если у вас есть интересная задача и вы хотите работать вместе, давайте обсудим!</p>
     </section>
     <section class="projects">
         <div class="project" id="esenia">
-            <img src="https://via.placeholder.com/400x200" alt="Esenia Project">
-            <h3>Esenia</h3>
-            <p>High-quality skincare solutions for everyone.</p>
+            <h3>
+                Es<span>enia</span>
+            </h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
         </div>
         <div class="project" id="swag">
-            <img src="https://via.placeholder.com/400x200" alt="SWAG Project">
-            <h3>SWAG</h3>
-            <p>Streetwear that makes a statement.</p>
+            <h3>
+                SW<span>AG</span>
+            </h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
         </div>
         <div class="project" id="drydry">
-            <img src="https://via.placeholder.com/400x200" alt="DRYDRY Project">
-            <h3>DRYDRY</h3>
-            <p>Innovative solutions for personal hygiene.</p>
+            <h3>
+                DRY<span>DRY</span>
+            </h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <p>&copy; 2024 Tsar Vladimir.</p>
     </footer>
 </body>
 </html>
+
+{% block custom_js %}
+<script src="{% static '/home/home.js' %}"></script>
+{% endblock custom_js %}

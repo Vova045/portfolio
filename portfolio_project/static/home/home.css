@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: #212228;
+    color: #ffffff;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5DADE2;
+}
+.language-toggle {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #aaaaaa;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 3px 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.language-toggle:hover {
+    background-color: #ffffff;
+    color: #212228;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 20px;
+    background-color: #212228;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 300;
+}
+.hero p {
+    font-size: 2rem;
+    line-height: 2.889rem;
+    color: #ffffff;
+    width: 75%;
+    margin: 20px auto 0 auto;
+    font-weight: 300;
+}
+.hero p a{
+    color: #5DADE2;
+    cursor: pointer;
+}
+.projects {
+    display: flex;
+    flex-direction: column; /* Блоки расположены вертикально */
+    gap: 40px; /* Увеличиваем расстояние между секциями */
+    padding: 20px 20px; /* Отступы по бокам */
+    margin: 0 auto;
+    max-width: 90%; /* Ограничиваем ширину */
+}
+
+.project {
+    aspect-ratio: 16 / 9; /* Пропорция 16:9 */
+    background-color: #2A2F30; /* Цвет по умолчанию */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+    padding: 20px; /* Отступы внутри секции */
+}
+
+.project:hover {
+    transform: scale(1.005); /* Едва заметное увеличение */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Лёгкое усиление тени */
+}
+
+#esenia {
+    background-color: #2ECC71; /* Кислотно-салатовый */
+}
+
+#swag {
+    background-color: #9B59B6; /* Фиолетовый */
+}
+
+#drydry {
+    background-color: #E67E22; /* Оранжевый */
+}
+
+.project img {
+    width: 70%; /* Ещё меньше ширина изображения */
+    max-height: 30%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 2.889rem;
+    color: #ffffff;
+    font-weight: 300;
+}
+.project h3 span {
+    opacity: 0.85; /* Прозрачность нижней строки */
+}
+
+.project video {
+    width: 90%; /* Ширина видео */
+    max-height: 100%; /* Высота ограничена */
+    object-fit: cover; /* Скрытие частей видео за контейнером */
+    border-radius: 10px;
+    margin-top: 20px; /* Расстояние между заголовком и видео */
+}
+
+.project p {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0 20px;
+    line-height: 1.5rem;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2A2F30;
+    color: #AAAAAA;
+}
+
+/* Скроллинг при клике на проект */
+.nav-links a.active {
+    color: #5DADE2;
+}
