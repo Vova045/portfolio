@@ -24,15 +24,24 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 STATIC_URL = '/static/'
 
-# Для разработки: путь к статическим файлам
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# Base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Для продакшн-сервера: где собирать статику
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Static files
+STATIC_URL = '/static/'
 
-# Application definition
+if DEBUG:
+    # В разработке: статика из папки 'static'
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+else:
+    # В продакшене: собранная статика в папке 'staticfiles'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    print(STATIC_ROOT)
+
+
+BASE_URL="http://127.0.0.1:8000"
 
 INSTALLED_APPS = [
     'django.contrib.admin',
