@@ -126,18 +126,19 @@ DATETIME_FORMAT="H:i:s d.m.y"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
-base_static = Path(__file__).resolve().parent.parent
-if DEBUG:
-    STATICFILES_DIRS = [
-        os.path.join(base_static, 'static')
-    ]
-else:
-    STATICFILES_DIRS = [
-        os.path.join(base_static, 'static')
-    ]
-    # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# base_static = Path(__file__).resolve().parent.parent
+# if DEBUG:
+#     STATICFILES_DIRS = [
+#         os.path.join(base_static, 'static')
+#     ]
+# else:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # print(STATICFILES_DIRS)
 BASE_URL="http://127.0.0.1:8000"
 
