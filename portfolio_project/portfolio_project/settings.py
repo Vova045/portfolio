@@ -25,7 +25,7 @@ load_dotenv()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 ALLOWED_HOSTS = ['localhost','127.0.0.1','vladimirtsar.ru', '31.31.196.187']
@@ -135,9 +135,6 @@ if DEBUG:
     ]
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    STATICFILES_DIRS = [
-        os.path.join(base_static, 'static')
-    ]
 # print(STATICFILES_DIRS)
 BASE_URL="http://127.0.0.1:8000"
 
