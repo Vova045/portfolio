@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Merkushev</title>
+    <link rel="stylesheet" href="{% static 'home/about.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'home/photo.jpg' %}" alt="Logo">
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="{% url 'about' %}" class="nav-about">Обо мне</a>
+                <a href="{% url 'home' %}" class="nav-home">Домой</a>
+                <a href="#contact" class="nav-contact active">Связь</a>
+            </div>
+            <div class="language-toggle" onclick="toggleLanguage()">
+                <span>EN</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" data-lang="ru">
+        <h2 class="hero-title">Обо мне</h2>
+        <p class="hero-text">
+            Я Александр Меркулев, увлечённый инженер-программист с более чем 10-летним опытом в разработке программного обеспечения.
+            Я специализируюсь на создании масштабируемых, надёжных и эффективных программных систем, а также на наставничестве для начинающих разработчиков.
+        </p>
+    </section>
+
+    <section>
+        <h2 class="experience-title">Опыт</h2>
+        <p class="experience-text">
+            <strong>Ведущий инженер-программист в TechCorp</strong> (2018 - настоящее время)
+            <br>Руководство командой разработчиков для создания инновационных программных решений.
+        </p>
+        <p class="experience-text">
+            <strong>Разработчик программного обеспечения в CodeWorks</strong> (2013 - 2018)
+            <br>Участие в разработке множества приложений и систем.
+        </p>
+    </section>
+
+    <section>
+        <h2 class="education-title">Образование</h2>
+        <p class="education-text">
+            <strong>Магистр в области компьютерных наук</strong> - Государственный университет (2011 - 2013)
+        </p>
+        <p class="education-text">
+            <strong>Бакалавр в области программной инженерии</strong> - Государственный университет (2007 - 2011)
+        </p>
+    </section>
+
+    <section>
+        <h2 class="contact-title">Контакт</h2>
+        <p class="contact-text">
+            Email: <a href="mailto:alexander.merkushev@example.com" style="color: #5DADE2;">alexander.merkushev@example.com</a>
+        </p>
+        <p class="contact-text">
+            LinkedIn: <a href="https://linkedin.com/in/alexander-merkushev" style="color: #5DADE2;">linkedin.com/in/alexander-merkushev</a>
+        </p>
+        <p class="contact-text">
+            Местоположение: Москва, Россия
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Александр Меркулев. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
+{% block custom_js %}
+<script src="{% static '/home/about.js' %}"></script>
+{% endblock custom_js %}

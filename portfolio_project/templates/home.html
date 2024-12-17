@@ -14,9 +14,9 @@
         </div>
         <div class="nav-container">
             <div class="nav-links">
-                <a href="#about">Обо мне</a>
-                <a href="#home" class="active">Домой</a>
-                <a href="#contact">Связь</a>
+                <a href="{% url 'about' %}">Обо мне</a>
+                <a href="#home" class="active">Дом</a>
+                <!-- <a href="{% url 'contact' %}">Связь</a> -->
             </div>
             <div class="language-toggle" onclick="toggleLanguage()">
                 <span>EN</span>
@@ -25,37 +25,44 @@
     </header>
     <section class="hero" data-lang="ru">
         <p>Привет, я Владимир 😊<br> Программист из России, увлеченный решением задач и созданием продуктов для B2B и B2C. Я full-stack разработчик, способный работать с любой стадии проекта до завершения.
-            Среди моих проектов, работа с такими брендами как <a>Esenia</a>, <a>SWAG</a> и <a>DryDry</a>.
+            Среди моих проектов, работа с такими брендами как <a href="#esenia">Esenia</a>, <a href="#swag">SWAG</a> и <a href="#drydry">DryDry</a>.
+            Про мои умения и увлечения вы можете прочитать <a style="text-decoration: none;" href="{% url 'about' %}">здесь</a>.
             Если у вас есть интересная задача и вы хотите работать вместе, давайте обсудим!</p>
     </section>
     <section class="projects">
-        <div class="project" id="esenia">
-            <h3>
-                Es<span>enia</span>
-            </h3>
-            <video controls>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
+        <div class="project esenia" id="esenia">
+            <h3>Esenia</h3>
+            <h3 class="opacity07">Веб-приложение для демонстрации интерактивных панелей</h3>
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=212704877&id=456239336&hd=2" 
+            allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" 
+            frameborder="0" 
+            allowfullscreen>
+            </iframe>
         </div>
         <div class="project" id="swag">
-            <h3>
-                SW<span>AG</span>
-            </h3>
-            <video controls>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
+            <h3>SWAG</h3>
+            <h3 class="opacity07">Веб-приложение для презентации жевательного табака</h3>
+            <!-- <div class="video-cover" onclick="playVideo(this)">
+                <img src="{% static 'home/esenia_preview.jpg' %}" alt="Видео превью" class="cover-image">
+                <div class="play-button"></div>
+            </div> -->
+            <!-- Использование iframe для видео с VK -->
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=212704877&id=456239333&hd=2" 
+            allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" 
+            frameborder="0" 
+            allowfullscreen>
+            </iframe>
         </div>
         <div class="project" id="drydry">
-            <h3>
-                DRY<span>DRY</span>
-            </h3>
-            <video controls>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
+            <h3>DRYDRY</h3>
+            <h3 class="opacity07">Поддержка сайта по продаже косметических средств</h3>
+            <div class="image-scroll-container">
+                <div class="scrolling-image-wrapper">
+                    <img src="{% static 'home/drydry.jpg' %}" alt="DryDry" class="scrolling-image">
+                </div>
+            </div>
         </div>
+        
     </section>
     <footer>
         <p>&copy; 2024 Tsar Vladimir.</p>

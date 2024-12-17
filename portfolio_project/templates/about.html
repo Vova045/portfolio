@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <link rel="stylesheet" href="{% static 'home/about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'home/photo.jpg' %}" alt="Logo">
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#about" class="nav-about active">Обо мне</a>
+                <a href="{% url 'home' %}" class="nav-home">Домой</a>
+            </div>
+            <div class="language-toggle" onclick="toggleLanguage()">
+                <span>EN</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="intro-text">
+            <h2>Владимир Цар</h2>
+            <p>Full-Stack Разработчик. Продукт Менеджер.</p>
+            <p>Я занимаюсь созданием эффективных и масштабируемых веб-приложений и решений, а также управляю продуктами. Мой опыт охватывает весь цикл разработки — от идеи до запуска. Я всегда открыт для интересных проектов и новых вызовов.</p>
+        </div>
+        <div class="intro-contact">
+            <h3>Контакты</h3>
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <p><a href="https://yandex.ru/maps/?text=Старый%20Оскол" target="_blank">Старый Оскол, Россия</a></p>
+            </div>
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <p><a href="mailto:vovatsar@bk.ru">vovatsar@bk.ru</a></p>
+            </div>
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <p><a href="https://t.me/vova045" target="_blank">Vova045</a></p>
+            </div>
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <p><a href="tel:+79040950110">89040950110</a></p>
+            </div>
+            <div class="contact-item">
+                <div class="icon-container">
+                    <i class="fab fa-github"></i>
+                </div>
+                <p><a href="https://github.com/vova045" target="_blank">Vova045</a></p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <hr class="divider">
+    
+    <section class="experience">
+        <h2 class="experience-title">Опыт</h2>
+        <p class="experience-text">
+            <strong>Студия Наружной Рекламы</strong> (2024)
+            <br>
+            Разработка приложения на Bitrix для управления рекламными кампаниями.
+            <br>
+            <span class="experience-subtext">
+                В рамках проекта был разработан и внедрен сайт на Django, размещенный на сервере Windows Server. Я занимался изучением бизнес-процессов компании, включая подсчет заказов, материалов и услуг. Одной из ключевых задач было создание калькулятора цен. 
+                Было необходимо разработать систему для учета технологических операций, включая расчеты времени и расходных материалов. Также разрабатывал систему для подсчета прибыли, накладных расходов и зарплаты сотрудников. 
+                Изначально все эти процессы велись в 1С, но задача заключалась в полном переходе на платформу Bitrix, что позволило значительно повысить скорость расчета заказов и упростить работу менеджеров.
+                Теперь, при звонке клиента, менеджер может оперативно посчитать стоимость заказа прямо в Bitrix.
+            </span>
+        </p>
+        <p class="experience-text">
+            <strong>Косметологическая компания DryDry</strong> (2022 - 2024)
+            <br>Техническое обслуживание и оптимизация сайта для косметологической компании.
+            <br>
+            <span class="experience-subtext">
+                Я занимался доработкой и поддержкой существующего сайта, включая изменения логотипов, цветовой схемы и разработку адаптивной верстки. Создавал лендинги для продукции и верстал страницы из PSD-макетов. 
+                Внедрил слайдер с анимацией, улучшил фильтры поиска и добавил раздел новостей с интерактивной картой. Разрабатывал функционал на Django, решал проблемы с сервером и обеспечивал оптимизацию работы сайта.
+                Подготовка графики для слайдера и визуальных элементов также входила в мои обязанности.
+            </span>
+        </p>
+        <p class="experience-text">
+            <strong>Табачная фабрика SWAG</strong> (2023 - 2024)
+            <br>Разработка веб-приложения для управления процессами на табачной фабрике.
+            <br>
+            <span class="experience-subtext">
+                Я разработал сайт с нуля, включая сложные анимации, эффекты и уникальные интерактивные элементы. Реализовал параллакс-эффект, анимации для автомобиля, вывески и дождя, а также взаимодействие с пользователем через подсветку элементов и динамическую навигацию. 
+                Настроил формы отправки данных, внедрил возрастное ограничение и интегрировал Яндекс.Карту. Проект включает кроссбраузерную и адаптивную верстку, плавные переходы и использование базы данных MySQL.
+            </span>
+        </p>
+        <p class="experience-text">
+            <strong>Интерактивные панели Esenia</strong> (2024)
+            <br>Разработка веб-приложения для управления услугами и клиентами Esenia.
+            <br>
+            <span class="experience-subtext">
+                Я создал уникальный сайт с интерактивным виртуальным городом, включающим улицы образования, развлечений и бизнеса. Реализованы видеопереходы и параллакс-эффекты для создания глубины и реалистичности. Также интегрировал мультимедийные элементы внутри зданий и разработал страницу каталога с характеристиками панелей. Использовал GIMP и Blender для создания анимаций и эффектов, таких как движение машин и дождь. Проект был успешно завершен с акцентом на кроссбраузерную верстку и высокое качество визуализации.
+            </span>
+        </p>
+    </section>
+    
+    
+    
+    <hr class="divider">
+    
+    <section class="skills">
+        <h2 class="skills-title">Умения</h2>
+        <p class="skills-text">
+            Технические умения
+        </p>
+        
+        <div class="skills-container">
+            <!-- Левая часть: Умения -->
+            <div class="skills-column">
+                <ul class="skills-list">
+                    <li>
+                        <span>HTML</span>
+                        <div class="stars" title="90%">
+                            <div class="stars-filled" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>CSS</span>
+                        <div class="stars" title="80%">
+                            <div class="stars-filled" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Python</span>
+                        <div class="stars" title="70%">
+                            <div class="stars-filled" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>JavaScript</span>
+                        <div class="stars" title="80%">
+                            <div class="stars-filled" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>SQL</span>
+                        <div class="stars" title="50%">
+                            <div class="stars-filled" style="width: 50%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>PHP</span>
+                        <div class="stars" title="30%">
+                            <div class="stars-filled" style="width: 30%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>React</span>
+                        <div class="stars" title="30%">
+                            <div class="stars-filled" style="width: 30%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Java</span>
+                        <div class="stars" title="20%">
+                            <div class="stars-filled" style="width: 20%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Git</span>
+                        <div class="stars" title="70%">
+                            <div class="stars-filled" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Django</span>
+                        <div class="stars" title="80%">
+                            <div class="stars-filled" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Правая часть: Программы -->
+            <div class="skills-column">
+                <ul class="skills-list">
+                    <li>
+                        <span>Photoshop</span>
+                        <div class="stars" title="70%">
+                            <div class="stars-filled" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>CorelDRAW</span>
+                        <div class="stars" title="90%">
+                            <div class="stars-filled" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Illustrator</span>
+                        <div class="stars" title="65%">
+                            <div class="stars-filled" style="width: 65%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>VS Code</span>
+                        <div class="stars" title="80%">
+                            <div class="stars-filled" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Figma</span>
+                        <div class="stars" title="60%">
+                            <div class="stars-filled" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>DBeaver</span>
+                        <div class="stars" title="60%">
+                            <div class="stars-filled" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>MS Office</span>
+                        <div class="stars" title="80%">
+                            <div class="stars-filled" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Postgres</span>
+                        <div class="stars" title="30%">
+                            <div class="stars-filled" style="width: 30%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>GIMP</span>
+                        <div class="stars" title="60%">
+                            <div class="stars-filled" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Blender</span>
+                        <div class="stars" title="60%">
+                            <div class="stars-filled" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <span class="experience-subtext skills-subtext">
+            Имею опыт работы с Bitrix, 1C и готов к изучению новых языков программирования и программ.
+        </span>
+
+        <hr class="divider" style="width: 100%;">
+
+        <h2 class="education-title language-title">Знание языков</h2>
+        
+        <div class="skills-container">
+            <!-- Левая часть: Языки -->
+            <div class="skills-column">
+                <ul class="skills-list language-list">
+                    <li>
+                        <span>Русский</span>
+                        Родной
+                    </li>
+                    <li>
+                        <span>Английский</span>
+                        B1
+                    </li>
+                </ul>
+            </div>
+            <!-- Правая часть: Языки -->
+            <div class="skills-column">
+                <ul class="skills-list language-list">
+                    <li>
+                        <span>Немецкий</span>
+                        A2
+                    </li>
+                    <li>
+                        <span>Чешский</span>
+                        A1
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="divider" style="width: 100%;">
+
+        <h2 class="education-title">Хобби</h2>
+        
+        <div class="skills-container">
+            <!-- Левая часть: Языки -->
+            <div class="skills-column" style="width: 100%;">
+                <ul class="skills-list">
+                    <li>
+                        <span>Спорт</span>
+                        Бег на длинные дистанции, Большой теннис, Футбол
+                    </li>
+                    <li>
+                        <span>Создание индивидуальных товаров</span>
+                        Портреты, Стикеры, Изделия из дерева
+                    </li>
+                    <li>
+                        <span>Домашние животные</span>
+                        Стаффорд и Немецкая овчарка
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>    
+    
+    <hr class="divider">
+    <footer>
+        <p>&copy; 2024 Владимир Цар</p>
+    </footer>
+</body>
+</html>
+
+{% block custom_js %}
+<script src="{% static '/home/about.js' %}"></script>
+{% endblock custom_js %}

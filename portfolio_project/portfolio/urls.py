@@ -7,6 +7,8 @@ from django.views.static import serve
 from . import views
 urlpatterns = [
     path('', views.home, name='home'),
+    path('about', views.about, name='about'),
+    path('contact', views.contact, name='contact'),
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT})
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
