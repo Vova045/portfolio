@@ -11,9 +11,369 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: transparent;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: transparent;body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        background-color: #212228;
+        color: #ffffff;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: transparent;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .logo {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .nav-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.05rem;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #5DADE2;
+    }
+    
+    .language-toggle {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: #aaaaaa;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        padding: 3px 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: 20px;
+    }
+    
+    .language-toggle:hover {
+        background-color: #ffffff;
+        color: #212228;
+    }
+    
+    /* Новый стиль для intro */
+    .intro {
+        width: 90%; /* Устанавливаем ширину блока на 90% */
+        margin: 0 auto; /* Центрируем блок по горизонтали */
+        display: flex;
+        justify-content: space-between;
+        height: 30vh; /* Ограничиваем высоту */
+        padding: 0 40px; /* Добавляем отступы по бокам */
+    }
+    
+    .intro-text {
+        width: 50%; /* 2/3 ширины */
+    }
+    
+    .intro-contact {
+        padding-left: 40px; /* Больше отступа слева для выравнивания */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Заголовки и абзацы */
+    .intro h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .intro p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    /* Контактные данные */
+    .contact-item {
+        display: flex;
+        align-items: center; /* Центрируем иконку и текст по вертикали */
+        margin-bottom: 10px;
+    }
+    
+    .contact-item i {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    
+    /* Контейнеры для иконок */
+    .icon-container {
+        width: 30px; /* Фиксированная ширина для контейнера */
+        display: flex;
+        justify-content: center; /* Центрируем иконку */
+    }
+    
+    /* Текстовые данные */
+    .contact-item p {
+        font-size: 1rem;
+        margin: 0;
+    }
+    
+    .contact-text a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    
+    /* Ссылки */
+    .contact-item a {
+        color: #3498db;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    /* Заголовок блока с контактами */
+    .intro-contact h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    
+    .experience {
+        width: 90%; /* Ширина блока будет 90% */
+        margin: 40px auto; /* Центрируем блок по горизонтали и добавляем отступ сверху и снизу */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Добавляем отступы между элементами */
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    
+    .experience-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+    
+    .experience-text {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    .divider {
+        width: 90%; /* Тоже 90%, чтобы линия соответствовала ширине контента */
+        margin: 40px auto; /* Центрируем по горизонтали и добавляем отступ сверху и снизу */
+        border: 0;
+        border-top: 1px solid #ffffff; /* Белая линия */
+    }
+    
+    .education {
+        width: 90%; /* Ширина блока будет 90% */
+        margin: 40px auto; /* Центрируем блок по горизонтали */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Отступы между элементами */
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    
+    .education-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+    
+    .education-text {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    .skills-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+    
+    .skills-text {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    .contact {
+        width: 90%; /* Ширина блока будет 90% */
+        margin: 40px auto; /* Центрируем блок по горизонтали */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Отступы между элементами */
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+    
+    .contact-text {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    .divider {
+        width: 90%; /* Тоже 90%, чтобы линия соответствовала ширине контента */
+        margin: 40px auto; /* Центрируем по горизонтали */
+        border: 0;
+        border-top: 1px solid #ffffff; /* Белая линия */
+    }
+    
+    .experience-text {
+        margin-bottom: 20px; /* Увеличиваем пространство между блоками */
+    }
+    
+    .experience-subtext {
+        color: rgb(223, 240, 255);
+        font-size: 0.9rem; /* Уменьшаем размер шрифта */
+        font-weight: 300; /* Делаем текст тоньше */
+        margin-top: 10px; /* Добавляем отступ сверху */
+        line-height: 1.6; /* Увеличиваем межстрочное расстояние */
+        padding: 5px 0; /* Уменьшаем отступы внутри блока */
+    }
+    
+    .skills {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .skills-column {
+        width: 48%; /* По умолчанию, каждая колонка занимает 48% от ширины контейнера */
+    }
+    
+    .skills-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .skills-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #ffffff;
+    }
+    
+    .skills-list span {
+        width: 150px; /* Увеличиваем ширину для лучшего отображения текста */
+        font-weight: 500; /* Делаем текст немного легче */
+        text-align: left;
+        color: #ffffff;
+        font-size: 1rem; /* Немного уменьшаем размер шрифта */
+    }
+    
+    /* Для программы и инструментов (например, Photoshop и другие) */
+    .skills-list li span {
+        font-weight: 300; /* Легкий шрифт */
+        font-size: 0.9rem; /* Уменьшаем размер шрифта */
+    }
+    
+    .stars {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 300px; /* Ограничиваем максимальную ширину прогресс-бара */
+        height: 20px;
+        background: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+    
+    .stars-filled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #3498db;
+        transition: width 0.5s ease-in-out;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #AAAAAA;
+    }
+    
+    /* Адаптивность: на малых экранах колонки будут занимать 100% ширины */
+    @media (max-width: 1024px) {
+        .skills-column {
+            width: 48%; /* На экранах меньше 1024px сохраняем две колонки */
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .intro, .experience, .education, .contact {
+            width: 100%; /* Устанавливаем 100% ширины для блоков */
+            padding: 0 20px; /* Добавляем отступы по бокам */
+        }
+    
+        .intro-text, .intro-contact {
+            width: 100%; /* Контентный блок будет 100% */
+            margin-bottom: 20px; /* Увеличиваем отступ между блоками */
+
+        }
+    
+        .skills-column {
+            width: 100%; /* На экранах меньше 768px колонки становятся по 100% */
+        }
+    
+        .logo {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    
+        .nav-links a {
+            font-size: 1rem; /* Уменьшаем размер шрифта для навигации */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .nav-links a {
+            font-size: 0.9rem; /* Еще меньше размер шрифта для маленьких экранов */
+        }
+    }
 }
 
 .logo {
@@ -74,22 +434,26 @@ header {
 
 /* Новый стиль для intro */
 .intro {
-    width: 80%; /* Устанавливаем ширину блока на 80% */
+    width: 80%; /* Устанавливаем ширину блока на 90% */
     margin: 0 auto; /* Центрируем блок по горизонтали */
     display: flex;
     justify-content: space-between;
-    height: 30vh; /* Ограничиваем высоту */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
     padding: 0 40px; /* Добавляем отступы по бокам */
+    min-height: 30vh; /* Минимальная высота для секции */
+    height: auto; /* Высота адаптируется под контент */
 }
 
 .intro-text {
-    width: 50%; /* 2/3 ширины */
+    width: 50%; /* 50% ширины для текста */
+    padding-right: 20px; /* Добавим немного отступа для текстового блока */
 }
 
 .intro-contact {
     padding-left: 40px; /* Больше отступа слева для выравнивания */
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Центрируем контент по вертикали */
 }
 
 /* Заголовки и абзацы */
@@ -146,7 +510,6 @@ header {
     margin-bottom: 15px;
 }
 
-
 .experience {
     width: 80%; /* Ширина блока будет 80% */
     margin: 40px auto; /* Центрируем блок по горизонтали и добавляем отступ сверху и снизу */
@@ -197,6 +560,7 @@ header {
     font-size: 1.2rem;
     line-height: 1.5;
 }
+
 .scills-title {
     font-size: 2rem;
     margin-bottom: 15px;
@@ -321,9 +685,52 @@ footer {
     padding: 20px;
     color: #AAAAAA;
 }
-/* Адаптивность: на малых экранах колонки будут занимать 100% ширины */
+
+/* Адаптивность для маленьких экранов */
 @media (max-width: 768px) {
+    .intro {
+        width: 100%; /* Блок будет 100% ширины */
+        padding: 0 20px; /* Меньше отступов на маленьких экранах */
+        min-height: 50vh; /* Увеличиваем минимальную высоту на малых экранах */
+        flex-direction: column; /* Ставим элементы в столбик */
+        justify-content: center; /* Центрируем элементы по вертикали */
+    }
+
+    .intro-text, .intro-contact {
+        width: 100%; /* Устанавливаем ширину 100% */
+        margin-bottom: 20px; /* Добавляем отступы между секциями */
+        padding-left: 40px;
+
+    }
+
+    .intro h2 {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта заголовка на малых экранах */
+    }
+
+    .intro p {
+        font-size: 1rem; /* Уменьшаем размер шрифта параграфа на малых экранах */
+        width: 80%;
+    }
+
     .skills-column {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h2 {
+        font-size: 1.2rem; /* Еще больше уменьшаем размер шрифта на очень маленьких экранах */
+    }
+
+    .intro p {
+        font-size: 0.9rem; /* Уменьшаем размер шрифта параграфа */
+    }
+
+    .skills-list {
+        font-size: 0.9rem;
+    }
+
+    .skills-list li {
+        margin-bottom: 10px; /* Меньше отступов */
     }
 }

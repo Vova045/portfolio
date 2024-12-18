@@ -138,7 +138,6 @@ header {
 }
 .project h3.opacity07{
     opacity: 0.7;
-    margin-bottom: -20px;
 }
 .project p {
     font-size: 1rem;
@@ -162,7 +161,7 @@ footer {
     transition: transform 0.15s, box-shadow 0.15s;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: space-evenly; 
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     overflow: hidden;
@@ -172,25 +171,19 @@ footer {
 
 .project iframe,
 .project video {
-    width: 90%; 
+    width: 80%; 
     aspect-ratio: 16 / 9;
     object-fit: cover; 
     position: relative;
-    top: 10%;
-    transform: translateY(5%); 
     border-radius: 10px; 
-    margin-bottom: -20px; 
 }
 .project.esenia iframe,
 .project.esenia video {
-    width: 90%; 
+    width: 80%; 
     aspect-ratio: 16 / 8.5; 
     object-fit: cover; 
     position: relative;
-    top: 10%; 
-    transform: translateY(9%); 
     border-radius: 10px; 
-    margin-bottom: -20px; 
 }
 .project img {
     position: relative;
@@ -207,15 +200,13 @@ footer {
 }
 .image-scroll-container {
     position: relative;
-    width: 90%; 
+    width: 80%; 
     height: 600px; 
     overflow-y: scroll; 
     overflow-x: hidden; 
     border-radius: 10px;
     margin: 0 auto; 
     background-color: #2A2F30; 
-    margin-bottom: -20px;
-    transform: translateY(9%);
 }
 .scrolling-image-wrapper {
     position: relative;
@@ -227,4 +218,42 @@ footer {
     height: auto; 
     display: block;
 }
-
+@media (max-width: 1200px) {
+    .project h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: #ffffff;
+        font-weight: 300;
+        }
+    .hero p{
+        font-size: 1.4rem;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 20px;
+        background-color: #212228;
+        }
+}
+@media (max-width: 768px) {
+    .project h3 {
+        margin: 0;
+        font-size: 0.7rem;
+        line-height: 0.7rem;
+        color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 10px;
+        }
+    .hero p{
+        font-size: 1rem;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 20px;
+        background-color: #212228;
+        }
+}
